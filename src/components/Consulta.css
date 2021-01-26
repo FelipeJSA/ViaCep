@@ -1,0 +1,156 @@
+.component-search {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    user-select: none;
+}
+
+#input-cep{
+    width: 50vw;
+    border-radius: 5px;
+    box-shadow: 2px 2px 8px 2px rgba(0, 0, 0, 0.5);
+    padding: 8px;
+    box-sizing: border-box;
+    margin-right: 1%;
+    color: #421266;
+}
+
+#input-cep:focus {
+    outline: none;
+}
+
+#input-cep::selection {
+    background-color: #c179f9;
+    color: #fff;
+}
+
+form{
+    display: flex;
+    justify-content: center;
+}
+
+.btn-find {
+    border-radius: 5px;
+    background-color: #8425CC;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+.btn-find:hover {
+    background-color: #8C39CC;
+    color: #fff;
+}
+
+.btn-find:focus {
+    outline: none;
+}
+
+.btn-clean {
+    border-radius: 5px;
+    background-color: #1F0433;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 1%;
+}
+
+.btn-clean:hover {
+    background-color: #8425CC;
+}
+
+.btn-clean:focus {
+    outline: none;
+}
+
+.component-response {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 2%;
+}
+
+.data-list{
+    width: 50%;
+    height: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #fff;
+    padding: 8px;
+    border-bottom: 1px solid rgba(132, 37, 204, 0.1);
+}
+
+.data-list::selection {
+   background-color: #c179f9;
+}
+
+.data-list.error-data-cep {
+    width: 100%;
+    color: #c179f9;
+    position: absolute;
+    bottom: 0;
+    padding: 16px 8px;
+    box-sizing: border-box;
+    animation-duration: 1s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+    from {
+      margin-bottom: -10%;
+    }
+  
+    to {
+      margin-top: 0%;
+      width: 99vw;
+    }
+}
+
+.icon-send {
+    font-size: 16px;
+    margin-right: 2%;
+    vertical-align: text-bottom;
+}
+
+.icon-clean{
+    font-size: 16px;
+    margin-left: 2%;
+    vertical-align: text-bottom;
+}
+
+@media only screen and (min-width: 1200px) {
+    .btn-find{
+        width: 12vw;
+    }
+    .btn-clean{
+        width: 8vw;
+    }
+}
+
+@media only screen and (max-width: 250px) {
+    form {
+        flex-direction: column;
+    }
+    #input-cep {
+        width: 100%;
+        margin-bottom: 2%;
+    }
+    .btn-find{
+        width: 100%;
+        font-size: 0.6em;
+        margin-bottom: 2%;
+    }
+    .btn-clean{
+        width: 100%;
+    }
+    .data-list {
+        height: max-content;
+        margin-bottom: 2%;
+    }
+    span {
+        font-size: 1rem;
+    }
+}
